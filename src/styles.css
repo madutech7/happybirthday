@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Amélioration du rendu pour les images de fond */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

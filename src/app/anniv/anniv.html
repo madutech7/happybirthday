@@ -1,0 +1,41 @@
+<div class="container">
+  <h1 class="main-title">Joyeux anniversaire Racky 🎉🥳💕</h1>
+  <p class="subtitle">Ma belle, ma douce, ma merveilleuse Racky Sakho SOW</p>
+
+  <app-typing-effect></app-typing-effect>
+
+  <button class="surprise-button" (click)="showSurprise()">
+    <span>Voir la surprise 🎁</span>
+  </button>
+</div>
+
+@if (showSurpriseModal()) {
+  <div class="surprise-modal-overlay" (click)="closeSurprise()">
+    <div class="surprise-modal" (click)="$event.stopPropagation()">
+      <button class="close-button" (click)="closeSurprise()">×</button>
+      <div class="surprise-content">
+        <div class="surprise-icon">🎁</div>
+        <h2 class="surprise-title">Ma belle Racky 💕</h2>
+        <p class="surprise-message">
+          Tu es la plus belle surprise de ma vie ! Chaque jour à tes côtés est un cadeau précieux que je chéris au plus profond de mon cœur.
+        </p>
+        <p class="surprise-message">
+          Je t'aime plus que les mots ne peuvent le dire, plus que les étoiles dans le ciel, plus que tout au monde.
+        </p>
+        <p class="surprise-message">
+          Que cette journée soit aussi merveilleuse que toi, remplie de joie, de bonheur et de moments magiques que nous partagerons ensemble.
+        </p>
+        <div class="surprise-photos">
+          <img src="/photo1.jpg" alt="Photo 1" class="surprise-photo" />
+          <img src="/photo2.jpg" alt="Photo 2" class="surprise-photo" />
+          <video src="/photo3.mp4" class="surprise-photo" autoplay loop muted playsinline volume="0"></video>
+        </div>
+        <p class="surprise-signature">Pour toujours et à jamais ❤️✨</p>
+      </div>
+    </div>
+  </div>
+}
+
+<app-confetti #confettiRef></app-confetti>
+<app-fireworks></app-fireworks>
+<app-emojis-rain></app-emojis-rain>
